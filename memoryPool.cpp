@@ -77,6 +77,7 @@ template<class U>
 inline void
 CMemoryPool<T>::construct(pointer p, const U& args)
 {
+	//implacement new 实现在已经分配的内存上调用构造函数
 	new(p) T(args);
 }
 
